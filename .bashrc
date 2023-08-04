@@ -18,6 +18,8 @@ export HISTSIZE='32768'
 export HISTFILESIZE="${HISTSIZE}"
 # Omit duplicates and commands that begin with a space from history
 export HISTCONTROL='ignoreboth'
+# Write history to a place that MAYBE won't be lost when the Codespace disconnects
+export HISTFILE=/workspaces/.codespaces/.persistedshare/dotfiles/.bash_history
 
 # Prefer US English and use UTF-8
 export LANG='en_US.UTF-8'
