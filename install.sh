@@ -26,6 +26,7 @@ sudo apt-get install hub -y
 # See: https://docs.github.com/en/codespaces/customizing-your-codespace/personalizing-github-codespaces-for-your-account#dotfiles
 DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles
 cp $DOTFILES/.bashrc ~/.bashrc
+cp $DOTFILES/sync-history.sh ~/sync-history.sh
 cp $DOTFILES/.gitconfig ~/.gitconfig
 cp $DOTFILES/.gitconfig.local ~/.gitconfig.local
 cp $DOTFILES/.gitconfig.global ~/.gitconfig.global
