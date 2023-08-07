@@ -25,8 +25,11 @@ sudo apt-get install hub -y
 # Also, the presence of this install script prevents other dotfiles files from being copied over into the HOME directory
 # See: https://docs.github.com/en/codespaces/customizing-your-codespace/personalizing-github-codespaces-for-your-account#dotfiles
 DOTFILES=/workspaces/.codespaces/.persistedshare/dotfiles
-cp $DOTFILES/.bashrc ~/.bashrc
-cp $DOTFILES/sync-history.sh ~/sync-history.sh
-cp $DOTFILES/.gitconfig ~/.gitconfig
 cp $DOTFILES/.gitconfig.local ~/.gitconfig.local
 cp $DOTFILES/.gitconfig.global ~/.gitconfig.global
+cp $DOTFILES/.gitconfig ~/.gitconfig
+cp $DOTFILES/sync-history.sh ~/sync-history.sh
+cp $DOTFILES/.bashrc ~/.bashrc
+
+# Ensure the new bash config gets sourced
+source ~/.bashrc
