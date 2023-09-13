@@ -21,6 +21,11 @@ sudo apt install gh -y
 # Install hub
 sudo apt-get install hub -y
 
+# Install diff-so-fancy for richer git diffs
+git clone https://github.com/so-fancy/diff-so-fancy ~/diff-so-fancy
+chmod +x ~/diff-so-fancy/diff-so-fancy
+sudo ln -s ~/diff-so-fancy/diff-so-fancy /usr/local/bin/diff-so-fancy
+
 # Copy individual files, because anything else is too finicky to work
 # Also, the presence of this install script prevents other dotfiles files from being copied over into the HOME directory
 # See: https://docs.github.com/en/codespaces/customizing-your-codespace/personalizing-github-codespaces-for-your-account#dotfiles
