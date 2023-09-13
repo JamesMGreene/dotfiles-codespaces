@@ -4,6 +4,8 @@
 	editor = vim
 	excludesfile = ~/.gitignore.global
 	pager = diff-so-fancy | less --tabs=4 -RFX
+[interactive]
+	diffFilter = diff-so-fancy --patch
 [color]
 	ui = true
 [color "diff-highlight"]
@@ -12,7 +14,10 @@
 	newNormal = green bold
 	newHighlight = green bold 22
 [color "diff"]
+	meta = 11
 	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
 	old = red bold
 	new = green bold
 	whitespace = red reverse
@@ -24,8 +29,6 @@
 	rebase = true
 [include]
 	path = .gitconfig.local
-[gpg]
-	program = /usr/local/MacGPG2/bin/gpg
 [init]
 	defaultbranch = main
 [pager]
