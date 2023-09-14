@@ -34,7 +34,7 @@ cp $DOTFILES/.gitignore.global ~/.gitignore.global
 cp $DOTFILES/.gitconfig.local ~/.gitconfig.local
 cp $DOTFILES/.gitconfig ~/.gitconfig
 cp $DOTFILES/sync-history.sh ~/sync-history.sh
-cp $DOTFILES/.bashrc ~/.bashrc.local
+cp $DOTFILES/.bashrc.local ~/.bashrc.local
 
 echo 'source "$HOME/.bashrc.local"' >> ~/.bashrc
 
