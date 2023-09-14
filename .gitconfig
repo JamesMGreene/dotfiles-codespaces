@@ -30,7 +30,10 @@
 [include]
 	path = .gitconfig.local
 [init]
-	defaultbranch = main
+	defaultBranch = main
+[push]
+	default = simple
+	autoSetupRemote = true
 [pager]
 	branch = false
 	tag = false
