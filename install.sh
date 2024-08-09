@@ -36,7 +36,8 @@ cp $DOTFILES/.gitconfig ~/.gitconfig
 cp $DOTFILES/sync-history.sh ~/sync-history.sh
 cp $DOTFILES/.bashrc.local ~/.bashrc.local
 
-# Install Homebrew on Linu
+# Install Homebrew on Linux
+# See: https://docs.brew.sh/Homebrew-on-Linux
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Add Homebrew to the path
