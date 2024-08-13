@@ -36,15 +36,17 @@ cp $DOTFILES/.gitconfig ~/.gitconfig
 cp $DOTFILES/sync-history.sh ~/sync-history.sh
 cp $DOTFILES/.bashrc.local ~/.bashrc.local
 
-# Install Homebrew on Linux
-# See: https://docs.brew.sh/Homebrew-on-Linux
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if [[ "$GITHUB_REPOSITORY" == "github/enterprise-web" ]]; then
+  # Install Homebrew on Linux
+  # See: https://docs.brew.sh/Homebrew-on-Linux
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Add Homebrew to the path
-test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
-test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-echo "# Add Homebrew to the path" >> ~/.bashrc.local
-echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc.local
+  # Add Homebrew to the path
+  test -d ~/.linuxbrew && eval "$(~/.linuxbrew/bin/brew shellenv)"
+  test -d /home/linuxbrew/.linuxbrew && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  echo "# Add Homebrew to the path" >> ~/.bashrc.local
+  echo "eval \"\$($(brew --prefix)/bin/brew shellenv)\"" >> ~/.bashrc.local
+fi
 
 echo 'source "$HOME/.bashrc.local"' >> ~/.bashrc
 
