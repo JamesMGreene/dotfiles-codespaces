@@ -18,9 +18,6 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 # Install the GitHub CLI
 sudo apt install gh -y
 
-# Install hub
-sudo apt-get install hub -y
-
 # Install diff-so-fancy for richer git diffs
 git clone https://github.com/so-fancy/diff-so-fancy ~/diff-so-fancy
 chmod +x ~/diff-so-fancy/diff-so-fancy
