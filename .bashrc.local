@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-# Make vim the default editor
-export EDITOR='vim'
+# Make vim the default editor, if it's available
+if command -v "vim" >/dev/null 2>&1; then
+  export EDITOR='vim'
+fi
 
 # Enable persistent REPL history for `node`
 export NODE_REPL_HISTORY=~/.node_history
@@ -30,6 +32,12 @@ export LESS_TERMCAP_md="${yellow}"
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X'
+
+# Enable git performance tracing for the github repo for when Codespace puishes take ~15 minutes ;_;
+# See https://github.com/github/codespaces/issues/21374
+if [[ "$GITHUB_REPOSITORY" == "github/github" ]]; then
+  export GIT_TRACE_PERFORMANCE=1
+fi
 
 ###
 # Aliases
