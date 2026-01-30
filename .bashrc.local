@@ -44,3 +44,6 @@ fi
 ###
 alias rdm='bin/rake db:migrate db:test:prepare'
 alias github-pull='git pull && script/bootstrap && bin/rake db:migrate db:test:prepare && bin/tapioca dsl'
+
+# This uses an OSC 52 sequence to allow a `| pbcopy` on Codespaces to inject into the local Mac clipboard
+alias pbcopy='printf "\033]52;c;$(base64 | tr -d "\n")\a"'
