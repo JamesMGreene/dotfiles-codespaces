@@ -35,9 +35,9 @@ export MANPAGER='less -X'
 
 # Enable git performance tracing for the github repo for when Codespace puishes take ~15 minutes ;_;
 # See https://github.com/github/codespaces/issues/21374
-if [[ "$GITHUB_REPOSITORY" == "github/github" ]]; then
-  export GIT_TRACE_PERFORMANCE=1
-fi
+#if [[ "$GITHUB_REPOSITORY" == "github/github" ]]; then
+#  export GIT_TRACE_PERFORMANCE=1
+#fi
 
 ###
 # Aliases
